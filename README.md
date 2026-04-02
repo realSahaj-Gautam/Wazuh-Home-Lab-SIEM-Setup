@@ -328,6 +328,145 @@ sudo shutdown now
 
 ---
 
+## Step 8: File Integrity Monitoring Testing
+
+**Objective:** Validate FIM functionality through practical tests
+
+### Test 1: File Creation
+
+- Navigated to `C:\Users\[username]\WazuhTest` directory on Windows
+- Right-clicked → New → Text Document
+- Named the file `test1.txt` and saved it
+
+**On Wazuh Dashboard:**
+- Navigated to "File Integrity Monitoring" module
+- Clicked "Refresh" and observed new alert appeared within 5 seconds
+- Clicked on the alert to inspect details:
+  - **Event type:** File added
+  - **File path:** `C:\Users\[username]\WazuhTest\test1.txt`
+  - **Timestamp:** Exact creation time
+  - **Agent:** Windows-Host (001)
+  - **File attributes:** Size, permissions, ownership
+  - **Hash values:** MD5, SHA1, SHA256 checksums
+
+### Test 2: File Deletion
+
+- Returned to the WazuhTest directory
+- Deleted `test1.txt` (right-click → Delete)
+- Confirmed deletion
+
+**On Wazuh Dashboard:**
+- Refreshed the File Integrity Monitoring view
+- New alert appeared:
+  - **Event type:** File deleted
+  - **File path:** `C:\Users\[username]\WazuhTest\test1.txt`
+  - **Timestamp:** Exact deletion time
+  - **Previous file details:** Retained for audit trail
+
+### Results
+
+- Both file creation and deletion events detected in real-time (< 5 seconds)
+- Complete audit trail maintained with full file metadata
+- Alerts properly categorized by severity (Rule level)
+- Demonstrated successful FIM implementation
+
+---
+
+## Step 9: Alert Analysis and Dashboard Exploration
+
+**Objective:** Understand and analyze real security event data and SIEM capabilities
+
+### Analyzed Alert Statistics (Last 24 Hours)
+
+| Severity | Rule Level | Alert Count |
+|---|---|---|
+| **Critical** | Level 15+ | 0 alerts |
+| **High** | Level 12-14 | 0 alerts |
+| **Medium** | Level 7-11 | 145 alerts |
+| **Low** | Level 0-6 | 159 alerts |
+| **Total** | All levels | 304 alerts |
+
+### Explored Security Modules
+
+- **Configuration Assessment** — Scanned Windows system configuration for security weaknesses
+- **Malware Detection** — Checked for indicators of compromise and malicious files
+- **Threat Hunting** — Reviewed security alerts for potential threats requiring investigation
+- **Vulnerability Detection** — Identified known vulnerabilities in installed software
+- **MITRE ATT&CK Mapping** — Correlated alerts with adversary tactics and techniques
+
+### Reviewed Log Sources
+
+- Windows Event Logs (Security, System, Application)
+- Syscheck (File Integrity Monitoring) events
+- Registry monitoring events
+- Process execution logs
+
+---
+
+## Step 10: Documentation and Knowledge Consolidation
+
+**Objective:** Document the project for portfolio and future reference
+
+- Captured screenshots of:
+  - Wazuh Dashboard overview showing active agents and alert statistics
+  - Endpoints page displaying registered agent details
+  - File Integrity Monitoring alerts
+- Created comprehensive project documentation including:
+  - Architecture diagrams showing network topology
+  - Step-by-step installation procedures
+  - Configuration files and commands used
+  - Troubleshooting notes and lessons learned
+- Organized project files for GitHub repository:
+  - `README.md` with full project details
+  - `screenshots/` directory with annotated images
+  - `documentation/` directory with guides and references
+- Prepared project for version control and portfolio presentation
+
+---
+
+## Step 11: Testing and Validation
+
+**Objective:** Ensure all components function correctly
+
+- Verified agent remained connected after system reboots
+- Tested FIM with multiple file operations:
+  - File modifications
+  - Multiple file creations
+  - Folder operations
+- Confirmed logs were being retained and searchable in the dashboard
+- Validated alert severity levels were appropriate
+- Tested dashboard filtering and search capabilities
+- Confirmed all security modules were operational
+
+---
+
 ## Key Takeaways
 
 This lab successfully demonstrated how enterprise SIEM platforms operate at a technical level. By deploying each Wazuh component individually — Indexer, Manager, Filebeat, and Dashboard — rather than using an all-in-one script, I gained deep understanding of how each layer contributes to the security monitoring pipeline. The real-world networking challenge of VirtualBox's bridged adapter bug required designing a NAT port forwarding solution that mirrors how security teams route traffic through network boundaries in production environments. Within minutes of connecting the Windows agent, the platform was detecting real security events, mapping them to MITRE ATT&CK techniques, and flagging a genuine malware detection alert — demonstrating that even a home lab environment surfaces real security signal.
+
+---
+
+## References
+
+- **Wazuh Official Documentation:** https://documentation.wazuh.com/
+- **Wazuh GitHub:** https://github.com/wazuh/wazuh
+- **MITRE ATT&CK:** https://attack.mitre.org/
+- **Project Tutorial** TheSocialDork - Wazuh SIEM Setup - https://youtu.be/QT81wcuoRFY
+
+---
+
+## Author
+
+**Sahaj Gautam**
+Cybersecurity Enthusiast | Security Analyst
+
+- 📧 Email: sahaj.gautam14@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/sahaj-gautam-1648771b3/
+
+---
+
+*This project demonstrates hands-on cybersecurity skills and practical experience with enterprise security tools. Built as part of continuous learning and professional development in the cybersecurity field.*
+
+**Project Status:** ✅ Completed | 🟢 Operational
+
+**Last Updated:** April 2026
