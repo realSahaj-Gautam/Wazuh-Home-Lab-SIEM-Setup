@@ -451,7 +451,7 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 ### 1. Installation Completion
 ![Installation Completion](screenshots/1-installation-completion.png)
 
-*Terminal output showing successful Wazuh 4.7.5 installation completion on Ubuntu Server 20.04 via SSH from Windows Terminal. The installation log confirms all four components were deployed successfully — Wazuh Dashboard installation finished, wazuh-dashboard service started, keystore updated, and web application initialized. The final line "Installation finished" confirms the entire Wazuh stack (Manager, Indexer, Dashboard, and Filebeat) is fully operational and ready for agent connections.*
+*Terminal output showing successful Wazuh 4.7.5 installation completion on Ubuntu Server 20.04 via SSH from Windows Terminal. The installation log confirms all four components were deployed successfully - Wazuh Dashboard installation finished, wazuh-dashboard service started, keystore updated, and web application initialized. The final line "Installation finished" confirms the entire Wazuh stack (Manager, Indexer, Dashboard, and Filebeat) is fully operational and ready for agent connections.*
 
 ---
 
@@ -465,35 +465,35 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 ### 3. Wazuh Dashboard Overview
 ![Dashboard Overview](screenshots/3-dashboard-overview.png)
 
-*Main Wazuh dashboard home page showing real-time agent summary and available security modules. The agents summary widget confirms 1 Total agent, 1 Active agent, 0 Disconnected, 0 Pending, and 0 Never connected — indicating 100% agent coverage. The dashboard displays all available security modules organized into four categories: Security Information Management (Security events, Integrity monitoring), Auditing and Policy Monitoring (Policy monitoring, System auditing, Security configuration assessment), Threat Detection and Response (Vulnerabilities, MITRE ATT&CK), and Regulatory Compliance (PCI DSS, NIST 800-53).*
+*Main Wazuh dashboard home page showing real-time agent summary and available security modules. The agents summary widget confirms 1 Total agent, 1 Active agent, 0 Disconnected, 0 Pending, and 0 Never connected - indicating 100% agent coverage. The dashboard displays all available security modules organized into four categories: Security Information Management (Security events, Integrity monitoring), Auditing and Policy Monitoring (Policy monitoring, System auditing, Security configuration assessment), Threat Detection and Response (Vulnerabilities, MITRE ATT&CK), and Regulatory Compliance (PCI DSS, NIST 800-53).*
 
 ---
 
 ### 4. Active Endpoints - Windows Agent
 ![Active Endpoints](screenshots/4-active-endpoints.png)
 
-*Wazuh Agents management page confirming successful agent registration and active communication. The status panel shows Active: 1, Disconnected: 0, Pending: 0, Never connected: 0 with Agents coverage at 100%. The agent table displays full endpoint details — ID: 001, Name: Windows-Host, IP Address: 127.0.0.1 (via NAT port forwarding), Groups: default, Operating System: Microsoft Windows 11 Home Single Language 10.0.26200.8117, Cluster node: node01, Version: v4.7.5, Status: active (green indicator). The Evolution graph on the right shows continuous active connection over the last 24 hours.*
+*Wazuh Agents management page confirming successful agent registration and active communication. The status panel shows Active: 1, Disconnected: 0, Pending: 0, Never connected: 0 with Agents coverage at 100%. The agent table displays full endpoint details - ID: 001, Name: Windows-Host, IP Address: 127.0.0.1 (via NAT port forwarding), Groups: default, Operating System: Microsoft Windows 11 Home Single Language 10.0.26200.8117, Cluster node: node01, Version: v4.7.5, Status: active (green indicator). The Evolution graph on the right shows continuous active connection over the last 24 hours.*
 
 ---
 
 ### 5. Agent Analytics - Windows-Host Detail View
 ![Agent Analytics](screenshots/5-agent-analytics.png)
 
-*Detailed agent view for the Windows-Host endpoint (ID: 001) showing comprehensive real-time monitoring data. Agent metadata confirms: Status: active, IP: 127.0.0.1, Version: Wazuh v4.7.5, Group: default, OS: Microsoft Windows 11 Home, Cluster node: node01, Registration date: Apr 2, 2026 @ 15:40:19.000, Last keep-alive: Apr 2, 2026 @ 18:24:40.000. The MITRE ATT&CK panel shows top tactics detected — Defense Evasion (79), Persistence (79), Privilege Escalation (79), and Initial Access (78). The PCI DSS Compliance donut chart shows active compliance monitoring across requirements 2.2 (397 events), 10.2.5 (78), 2.2.5 (53), 4.1 (44), and 10.6.1 (28). The Events count evolution graph shows a significant spike of 400+ events during initial agent connection. The SCA Latest scans section shows CIS Microsoft Windows 11 Enterprise Benchmark v1.0.0 scan completed with 128 passed, 259 failed, 8 not applicable — scoring 33% compliance.*
+*Detailed agent view for the Windows-Host endpoint (ID: 001) showing comprehensive real-time monitoring data. Agent metadata confirms: Status: active, IP: 127.0.0.1, Version: Wazuh v4.7.5, Group: default, OS: Microsoft Windows 11 Home, Cluster node: node01, Registration date: Apr 2, 2026 @ 15:40:19.000, Last keep-alive: Apr 2, 2026 @ 18:24:40.000. The MITRE ATT&CK panel shows top tactics detected - Defense Evasion (79), Persistence (79), Privilege Escalation (79), and Initial Access (78). The PCI DSS Compliance donut chart shows active compliance monitoring across requirements 2.2 (397 events), 10.2.5 (78), 2.2.5 (53), 4.1 (44), and 10.6.1 (28). The Events count evolution graph shows a significant spike of 400+ events during initial agent connection. The SCA Latest scans section shows CIS Microsoft Windows 11 Enterprise Benchmark v1.0.0 scan completed with 128 passed, 259 failed, 8 not applicable - scoring 33% compliance.*
 
 ---
 
 ### 6. Security Events Dashboard
 ![Security Events](screenshots/6-security-events.png)
 
-*Security Events module showing comprehensive real-time Windows security monitoring data for the Windows-Host agent. Total of 512 security events collected with 0 Level 12+ critical alerts, 0 authentication failures, and 78 authentication successes. The Alert groups evolution graph shows multiple event categories — sca, ossec, authentication_success, rootcheck, windows, windows_security, windows_application, policy_changed, windows_system — with a major spike during initial agent connection. Top 5 alerts include Windows logon success, Software protection events, Service startup types, and CIS Microsoft Windows checks. Top 5 rule groups show sca, windows, authentication_success, windows_security, and windows_application. Top 5 PCI DSS Requirements chart shows active compliance mapping to requirements 2.2, 10.2.5, 2.2.5, 4.1, and 10.6.1. Security Alerts table at the bottom shows real-time MITRE ATT&CK mapped events — multiple T1078 (Valid Accounts) technique detections mapped to Defense Evasion, Persistence, Privilege Escalation, and Initial Access tactics.*
+*Security Events module showing comprehensive real-time Windows security monitoring data for the Windows-Host agent. Total of 512 security events collected with 0 Level 12+ critical alerts, 0 authentication failures, and 78 authentication successes. The Alert groups evolution graph shows multiple event categories - sca, ossec, authentication_success, rootcheck, windows, windows_security, windows_application, policy_changed, windows_system - with a major spike during initial agent connection. Top 5 alerts include Windows logon success, Software protection events, Service startup types, and CIS Microsoft Windows checks. Top 5 rule groups show sca, windows, authentication_success, windows_security, and windows_application. Top 5 PCI DSS Requirements chart shows active compliance mapping to requirements 2.2, 10.2.5, 2.2.5, 4.1, and 10.6.1. Security Alerts table at the bottom shows real-time MITRE ATT&CK mapped events — multiple T1078 (Valid Accounts) technique detections mapped to Defense Evasion, Persistence, Privilege Escalation, and Initial Access tactics.*
 
 ---
 
 ### 7. File Integrity Monitoring Module
 ![File Integrity Monitoring](screenshots/7-fim-dashboard.png)
 
-*File Integrity Monitoring (FIM) dashboard for the Windows-Host agent showing the syscheck module interface. The module is actively configured and monitoring with filters applied — manager.name: wazuh-manager, rule.groups: syscheck, agent.id: 001. The "No results for selected time range" message indicates the FIM baseline scan completed but no file change events occurred within the selected 24-hour window. FIM performs an initial full system baseline scan on first agent connection, cataloguing file hashes (MD5, SHA1, SHA256), permissions, ownership, and timestamps for all monitored directories including Windows System32, Program Files, and user directories. Any subsequent file modifications, creations, or deletions trigger immediate alerts detectable in the Events tab.*
+*File Integrity Monitoring (FIM) dashboard for the Windows-Host agent showing the syscheck module interface. The module is actively configured and monitoring with filters applied - manager.name: wazuh-manager, rule.groups: syscheck, agent.id: 001. The "No results for selected time range" message indicates the FIM baseline scan completed but no file change events occurred within the selected 24-hour window. FIM performs an initial full system baseline scan on first agent connection, cataloguing file hashes (MD5, SHA1, SHA256), permissions, ownership, and timestamps for all monitored directories including Windows System32, Program Files, and user directories. Any subsequent file modifications, creations, or deletions trigger immediate alerts detectable in the Events tab.*
 
 ---
 
