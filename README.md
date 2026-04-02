@@ -1,4 +1,4 @@
-# 🛡️ Wazuh SIEM Home Lab — Security Monitoring & File Integrity Detection
+# 🛡️ Wazuh SIEM Home Lab - Security Monitoring & File Integrity Detection
 
 ## Objective
 
