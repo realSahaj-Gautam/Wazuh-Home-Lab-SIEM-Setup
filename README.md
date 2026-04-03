@@ -1,4 +1,4 @@
-# 🛡️ Wazuh SIEM Home Lab - Security Monitoring & File Integrity Detection
+# Wazuh SIEM Home Lab - Security Monitoring & File Integrity Detection
 
 ## Objective
 
@@ -508,8 +508,8 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 **Keyur Dobariya**
 Cybersecurity Enthusiast | Security Analyst
 
-- 📧 Email: keyur.cybersec@gmail.com
-- 💼 LinkedIn: https://www.linkedin.com/in/keyurdobariya29/
+- Email: keyur.cybersec@gmail.com
+- LinkedIn: https://www.linkedin.com/in/keyurdobariya29/
 
 ---
 
