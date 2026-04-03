@@ -498,11 +498,11 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 
 ## Author
 
-**Keyur Dobariya**
+**Sahaj Gautam**
 Cybersecurity Enthusiast | Security Analyst
 
-- Email: keyur.cybersec@gmail.com
-- LinkedIn: https://www.linkedin.com/in/keyurdobariya29/
+- Email: sahaj.gautam14@gmail.com
+- LinkedIn: https://www.linkedin.com/in/sahaj-gautam-1648771b3/
 
 ---
 
