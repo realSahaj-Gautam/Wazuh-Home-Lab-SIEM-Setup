@@ -493,6 +493,7 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 
 - **Wazuh Official Documentation:** https://documentation.wazuh.com/
 - **Wazuh GitHub:** https://github.com/wazuh/wazuh
+- **Project Tutorial:** [TheSocialDork - Wazuh SIEM Setup](https://www.youtube.com/watch?v=QT81wcuoRFY&list=WL&index=4&t=1s)
 - **MITRE ATT&CK:** https://attack.mitre.org/
 
 ---
