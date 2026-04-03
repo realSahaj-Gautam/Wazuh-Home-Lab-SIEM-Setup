@@ -490,13 +490,6 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 
 ---
 
-### 7. File Integrity Monitoring Module
-![File Integrity Monitoring](screenshots/7-fim-dashboard.png)
-
-*File Integrity Monitoring (FIM) dashboard for the Windows-Host agent showing the syscheck module interface. The module is actively configured and monitoring with filters applied - manager.name: wazuh-manager, rule.groups: syscheck, agent.id: 001. The "No results for selected time range" message indicates the FIM baseline scan completed but no file change events occurred within the selected 24-hour window. FIM performs an initial full system baseline scan on first agent connection, cataloguing file hashes (MD5, SHA1, SHA256), permissions, ownership, and timestamps for all monitored directories including Windows System32, Program Files, and user directories. Any subsequent file modifications, creations, or deletions trigger immediate alerts detectable in the Events tab.*
-
----
-
 - **Wazuh Official Documentation:** https://documentation.wazuh.com/
 - **Wazuh GitHub:** https://github.com/wazuh/wazuh
 - **MITRE ATT&CK:** https://attack.mitre.org/
