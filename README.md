@@ -489,6 +489,7 @@ This lab successfully demonstrated how enterprise SIEM platforms operate at a te
 *Security Events module showing comprehensive real-time Windows security monitoring data for the Windows-Host agent. Total of 512 security events collected with 0 Level 12+ critical alerts, 0 authentication failures, and 78 authentication successes. The Alert groups evolution graph shows multiple event categories - sca, ossec, authentication_success, rootcheck, windows, windows_security, windows_application, policy_changed, windows_system - with a major spike during initial agent connection. Top 5 alerts include Windows logon success, Software protection events, Service startup types, and CIS Microsoft Windows checks. Top 5 rule groups show sca, windows, authentication_success, windows_security, and windows_application. Top 5 PCI DSS Requirements chart shows active compliance mapping to requirements 2.2, 10.2.5, 2.2.5, 4.1, and 10.6.1. Security Alerts table at the bottom shows real-time MITRE ATT&CK mapped events — multiple T1078 (Valid Accounts) technique detections mapped to Defense Evasion, Persistence, Privilege Escalation, and Initial Access tactics.*
 
 ---
+## Reference
 
 - **Wazuh Official Documentation:** https://documentation.wazuh.com/
 - **Wazuh GitHub:** https://github.com/wazuh/wazuh
